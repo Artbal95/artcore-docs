@@ -1,0 +1,12 @@
+{
+  "name": "@artcore/tsconfig",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Base TypeScript config for ArtCore architecture",
+  "files": [
+    "base.json"
+  ],
+  "devDependencies": {
+    "prettier": "^3.8.3"
+  }
+}

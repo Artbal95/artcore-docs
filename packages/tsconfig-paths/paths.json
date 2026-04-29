@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@public/*": ["public/*"],
+      "@root/*": ["src/root/*"],
+      "@assets/*": ["src/assets/*"],
+      "@common/*": ["src/common/*"],
+      "@modules/*": ["src/modules/*"],
+      "@services/*": ["src/services/*"],
+      "@pages/*": ["src/pages/*"],
+      "@appTypes/*": ["src/types/*"],
+      "@shared/components/*": ["src/shared/components/*"],
+      "@shared/containers/*": ["src/shared/containers/*"],
+      "@shared/dialogs/*": ["src/shared/dialogs/*"],
+      "@shared/entities/*": ["src/shared/entities/*"],
+      "@shared/enums/*": ["src/shared/enums/*"],
+      "@shared/hooks/*": ["src/shared/hooks/*"],
+      "@shared/layouts/*": ["src/shared/layouts/*"],
+      "@shared/utils/*": ["src/shared/utils/*"],
+      "@shared/services/*": ["src/shared/services/*"],
+      "@shared/helpers/*": ["src/shared/helpers/*"],
+      "@shared/constants/*": ["src/shared/constants/*"],
+      "@shared/providers/*": ["src/shared/providers/*"]
+    }
+  }
+}

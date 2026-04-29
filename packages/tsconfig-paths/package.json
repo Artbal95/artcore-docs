@@ -1,0 +1,9 @@
+{
+  "name": "@artcore/tsconfig-paths",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Base TypeScript paths config for ArtCore architecture",
+  "files": [
+    "paths.json"
+  ]
+}
