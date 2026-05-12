@@ -1,0 +1,12 @@
+[
+  {
+    "dir": "getting-started",
+    "text": "Getting Started",
+    "collapsed": false
+  },
+  {
+    "dir": "architecture",
+    "text": "Architecture",
+    "collapsed": true
+  }
+]

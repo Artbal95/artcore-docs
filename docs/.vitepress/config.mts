@@ -1,8 +1,12 @@
 import { defineConfig } from 'vitepress'
+import generateSidebar from './utils/sidebar.js'
+
+const isDev = process.env.NODE_ENV === 'development'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/artcore-docs/',
+  base: isDev ? '/' : '/artcore-docs/',
+  cleanUrls: true,
   locales: {
     root: {
       label: 'English',
@@ -10,27 +14,17 @@ export default defineConfig({
       title: 'ArtCore',
       description: 'Layered Modular Design (LMD)',
       themeConfig: {
+        logo: { dark: './dark.png', light: './light.png', alt: 'logo' },
+        footer: {
+          message: 'Released under the MIT License.',
+          copyright: 'Copyright © 2026-present Artur Balayan',
+        },
         nav: [
           { text: 'Home', link: '/' },
-          { text: 'Examples', link: '/markdown-examples' },
+          { text: 'Examples', link: '/docs/getting-started/installation' },
         ],
-        sidebar: [
-          {
-            text: 'Examples',
-            items: [
-              { text: 'Markdown Examples', link: '/markdown-examples' },
-              { text: 'Runtime API Examples', link: '/api-examples' },
-            ],
-          },
-        ],
+        sidebar: generateSidebar(),
         socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
-        localeLinks: {
-          text: 'Language',
-          items: [
-            { text: 'English', link: '/' },
-            { text: 'Русский', link: '/ru/' },
-          ],
-        },
       },
     },
     ru: {
@@ -41,25 +35,10 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Главная', link: '/ru/' },
-          { text: 'Гайд', link: '/ru/markdown-examples' },
+          { text: 'Гайд', link: '/ru/docs/getting-started/installation' },
         ],
-        sidebar: [
-          {
-            text: 'Examples',
-            items: [
-              { text: 'Markdown Examples', link: '/ru/markdown-examples' },
-              { text: 'Runtime API Examples', link: '/ru/api-examples' },
-            ],
-          },
-        ],
+        sidebar: generateSidebar('ru'),
         socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
-        localeLinks: {
-          text: 'Language',
-          items: [
-            { text: 'English', link: '/' },
-            { text: 'Русский', link: '/ru/' },
-          ],
-        },
       },
     },
   },

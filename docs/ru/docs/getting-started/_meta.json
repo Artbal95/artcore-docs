@@ -1,0 +1,26 @@
+[
+  {
+    "fileName": "installation",
+    "text": "Installation"
+  },
+  {
+    "fileName": "first-project",
+    "text": "First project"
+  },
+  {
+    "fileName": "folder-structure",
+    "text": "Folder structure"
+  },
+  {
+    "fileName": "routing",
+    "text": "Routing"
+  },
+  {
+    "fileName": "state-management",
+    "text": "State management"
+  },
+  {
+    "fileName": "best-practices",
+    "text": "Best practices"
+  }
+]
