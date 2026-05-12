@@ -6,6 +6,12 @@ import { DefaultTheme } from 'vitepress'
 const DOCS_PATH = 'docs'
 const DOCS_ROOT = path.resolve(process.cwd(), DOCS_PATH)
 
+const generatePath = (dir: string, locale?: string, fileName?: string): string => {
+  const stared = locale ? `/${locale}/${DOCS_PATH}/${dir}/` : `/${DOCS_PATH}/${dir}/`
+
+  return fileName ? `${stared}${fileName}` : stared
+}
+
 const readJson = <T>(filePath: string): T => {
   return JSON.parse(fs.readFileSync(filePath, 'utf-8')) as T
 }
@@ -33,8 +39,8 @@ const readSectionMeta = (sectionPath: string): SectionMeta[] => {
 const generateSidebar = (locale?: string): DefaultTheme.SidebarItem[] => {
   try {
     const localePath = locale
-      ? path.join(DOCS_ROOT, locale, DOCS_PATH)
-      : path.join(DOCS_ROOT, DOCS_PATH)
+      ? path.join(DOCS_ROOT, locale, 'src', DOCS_PATH)
+      : path.join(DOCS_ROOT, 'src', DOCS_PATH)
 
     if (!fs.existsSync(localePath)) {
       console.error(`Could not find localePath: ${localePath}`)
@@ -44,7 +50,15 @@ const generateSidebar = (locale?: string): DefaultTheme.SidebarItem[] => {
     const rootMeta = readRootMeta(localePath)
 
     return rootMeta.map((root) => {
-      const { dir, ...r } = root
+      const { index, dir, ...r } = root
+
+      if (index) {
+        return {
+          text: r.text,
+          link: generatePath(dir, locale),
+        }
+      }
+
       const sectionPath = path.join(localePath, dir)
 
       const sectionMeta = readSectionMeta(sectionPath)
@@ -53,13 +67,9 @@ const generateSidebar = (locale?: string): DefaultTheme.SidebarItem[] => {
         ...r,
         items: sectionMeta.map((section) => {
           const { fileName, text } = section
-          const link = locale
-            ? `/${locale}/${DOCS_PATH}/${dir}/${fileName}`
-            : `/${DOCS_PATH}/${dir}/${fileName}`
-
           return {
             text,
-            link,
+            link: generatePath(dir, locale, fileName),
           }
         }),
       }

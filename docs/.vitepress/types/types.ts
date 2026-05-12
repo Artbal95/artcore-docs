@@ -1,11 +1,11 @@
-import { DefaultTheme } from 'vitepress'
-
-export type SidebarItem = Required<DefaultTheme.SidebarItem>
-
-export interface RootMeta extends Pick<SidebarItem, 'text' | 'collapsed'> {
+export interface RootMeta {
+  index?: boolean
   dir: string
+  text: string
+  collapsed?: boolean
 }
 
-export interface SectionMeta extends Pick<SidebarItem, 'text'> {
+export interface SectionMeta {
   fileName: string
+  text: string
 }

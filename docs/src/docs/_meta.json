@@ -1,5 +1,11 @@
 [
   {
+    "index": true,
+    "dir": "introduction",
+    "text": "What is ArtCore?",
+    "collapsed": false
+  },
+  {
     "dir": "getting-started",
     "text": "Getting Started",
     "collapsed": false

@@ -5,13 +5,20 @@ hero:
   name: 'ArtCore'
   text: 'Layered Modular Design (LMD)'
   tagline: 'A scalable frontend architecture for complex React applications'
+  image:
+      dark: /dark.png
+      light: /light.png
+      alt: VitePress
   actions:
     - theme: brand
-      text: Get Started
-      link: /markdown-examples
+      text: Why ArtCore?
+      link: /docs/introduction
     - theme: alt
-      text: Docs
-      link: /api-examples
+      text: Getting Started
+      link: /docs/getting-started/installation
+    - theme: alt
+      text: View Templates
+      link: /docs/architecture/overview
 
 features:
   - icon: 🧱
