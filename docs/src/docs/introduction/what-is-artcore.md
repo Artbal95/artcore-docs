@@ -7,7 +7,7 @@ It is based on the **Layered Modular Design (LMD)** approach — an architecture
 Unlike common feature-based structures, ArtCore was designed for long-lived projects and teams consisting of many developers.
 
 ::: warning Quick start available
-If you already know what you want, you can jump directly to the [installation](/en/docs/getting-started/installation) and start using ArtCore in practice.
+If you already know what you want, you can jump directly to the [installation](/docs/getting-started/installation) and start using ArtCore in practice.
 :::
 
 ## Why ArtCore was created
