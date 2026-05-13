@@ -48,12 +48,26 @@ ArtCore — это система frontend-архитектуры, создан�
 
 ## Начать разработку
 
+<script setup>
+import { useData } from 'vitepress'
+
+const { lang, site } = useData()
+
+const withBase = (url) => site.value.base + url
+</script>
+
 <div style="display:flex;gap:16px;flex-wrap:wrap;">
 
-<a href="/ru/docs/introduction/what-is-artcore">Что такое ArtCore →</a>
+<a :href="withBase('ru/docs/introduction/what-is-artcore')">
+  Что такое ArtCore →
+</a>
 
-<a href="/ru/docs/getting-started/installation">Начало работы →</a>
+<a :href="withBase('ru/docs/getting-started/installation')">
+  Начало работы →
+</a>
 
-<a href="/ru/docs/architecture/overview">Изучить архитектуру →</a>
+<a :href="withBase('ru/docs/architecture/overview')">
+  Изучить архитектуру →
+</a>
 
 </div>

@@ -44,12 +44,26 @@ It combines layered architecture, modular boundaries, and strict dependency rule
 
 ## Start Building
 
+<script setup>
+import { useData } from 'vitepress'
+
+const { lang, site } = useData()
+
+const withBase = (url) => site.value.base + url
+</script>
+
 <div style="display:flex;gap:16px;flex-wrap:wrap;">
 
-<a href="/docs/introduction/what-is-artcore">What is ArtCore →</a>
+<a :href="withBase('docs/introduction/what-is-artcore')">
+  What is ArtCore →
+</a>
 
-<a href="/docs/getting-started/installation">Getting Started →</a>
+<a :href="withBase('docs/getting-started/installation')">
+  Getting Started →
+</a>
 
-<a href="/docs/architecture/overview">Explore Architecture →</a>
+<a :href="withBase('docs/architecture/overview')">
+  Explore Architecture →
+</a>
 
 </div>
