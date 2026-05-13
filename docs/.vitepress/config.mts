@@ -7,6 +7,9 @@ const basePath = isDev ? '/' : '/artcore-docs/'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: basePath,
+  sitemap: {
+    hostname: `https://artbal95.github.io${basePath}`,
+  },
   srcDir: './src',
   cleanUrls: true,
   head: [
