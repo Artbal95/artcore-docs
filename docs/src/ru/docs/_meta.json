@@ -1,12 +1,17 @@
 [
   {
+    "dir": "introduction",
+    "text": "Введение",
+    "collapsed": false
+  },
+  {
     "dir": "getting-started",
-    "text": "Getting Started",
+    "text": "Начало работы",
     "collapsed": false
   },
   {
     "dir": "architecture",
-    "text": "Architecture",
-    "collapsed": true
+    "text": "Архитектура",
+    "collapsed": false
   }
 ]

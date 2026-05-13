@@ -1,3 +1,5 @@
+export type Locales = 'ru'
+
 export interface RootMeta {
   index?: boolean
   dir: string

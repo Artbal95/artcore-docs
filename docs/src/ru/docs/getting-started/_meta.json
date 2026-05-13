@@ -1,26 +1,26 @@
 [
   {
     "fileName": "installation",
-    "text": "Installation"
+    "text": "Установка"
   },
   {
     "fileName": "first-project",
-    "text": "First project"
+    "text": "Первый проект"
   },
   {
     "fileName": "folder-structure",
-    "text": "Folder structure"
+    "text": "Структура папок"
   },
   {
     "fileName": "routing",
-    "text": "Routing"
+    "text": "Маршрутизация"
   },
   {
     "fileName": "state-management",
-    "text": "State management"
+    "text": "Управление состоянием"
   },
   {
     "fileName": "best-practices",
-    "text": "Best practices"
+    "text": "Лучшие практики"
   }
 ]

@@ -1,12 +1,12 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { RootMeta, SectionMeta } from '../types/types'
+import { Locales, RootMeta, SectionMeta } from '../types/types'
 import { DefaultTheme } from 'vitepress'
 
 const DOCS_PATH = 'docs'
 const DOCS_ROOT = path.resolve(process.cwd(), DOCS_PATH)
 
-const generatePath = (dir: string, locale?: string, fileName?: string): string => {
+const generatePath = (dir: string, locale?: Locales, fileName?: string): string => {
   const stared = locale ? `/${locale}/${DOCS_PATH}/${dir}/` : `/${DOCS_PATH}/${dir}/`
 
   return fileName ? `${stared}${fileName}` : stared
@@ -36,10 +36,10 @@ const readSectionMeta = (sectionPath: string): SectionMeta[] => {
   return readJson<SectionMeta[]>(metaPath)
 }
 
-const generateSidebar = (locale?: string): DefaultTheme.SidebarItem[] => {
+const generateSidebar = (locale?: Locales): DefaultTheme.SidebarItem[] => {
   try {
     const localePath = locale
-      ? path.join(DOCS_ROOT, locale, 'src', DOCS_PATH)
+      ? path.join(DOCS_ROOT, 'src', locale, DOCS_PATH)
       : path.join(DOCS_ROOT, 'src', DOCS_PATH)
 
     if (!fs.existsSync(localePath)) {
