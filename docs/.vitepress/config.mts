@@ -2,13 +2,60 @@ import { defineConfig } from 'vitepress'
 import generateSidebar from './utils/sidebar.js'
 
 const isDev = process.env.NODE_ENV === 'development'
+const basePath = isDev ? '/' : '/artcore-docs/'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: isDev ? '/' : '/artcore-docs/',
+  base: basePath,
   srcDir: './src',
   cleanUrls: true,
-  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }]],
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: `${basePath}favicon.svg` }],
+    // SEO basics
+    [
+      'meta',
+      {
+        name: 'description',
+        content: 'ArtCore — архитектура для масштабируемых frontend приложений',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'keywords',
+        content: 'ArtCore, frontend architecture, React architecture, DDD, FSD alternative',
+      },
+    ],
+    ['meta', { name: 'author', content: 'ArtCore Team' }],
+
+    // Open Graph (важно для шаринга в соцсетях)
+    ['meta', { property: 'og:title', content: 'ArtCore Documentation' }],
+    [
+      'meta',
+      {
+        property: 'og:description',
+        content: 'Scalable frontend architecture for modern applications',
+      },
+    ],
+    ['meta', { property: 'og:image', content: `${basePath}og-image.png` }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:url', content: 'https://artbal95.github.io/artcore-docs' }],
+
+    // Twitter Card
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'ArtCore Documentation' }],
+    [
+      'meta',
+      { name: 'twitter:description', content: 'Scalable frontend architecture for React projects' },
+    ],
+    ['meta', { name: 'twitter:image', content: `${basePath}og-image.png` }],
+
+    // viewport (если вдруг нет глобально)
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+
+    // theme color (иконка/браузерная тема)
+    ['meta', { name: 'theme-color', content: '#0f172a' }],
+  ],
   markdown: {
     anchor: {
       permalink: false,

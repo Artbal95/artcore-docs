@@ -5,10 +5,6 @@ hero:
     name: 'ArtCore'
     text: 'Layered Modular Design'
     tagline: 'Scalable architecture for complex React applications.'
-    image:
-        dark: /dark.png
-        light: /light.png
-        alt: ArtCore
     actions:
         - theme: brand
           text: What is ArtCore?
