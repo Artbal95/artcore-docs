@@ -17,7 +17,12 @@ watchEffect(() => {
 <template>
   <DefaultTheme.Layout>
     <template #home-hero-image>
-      <video :src="base + 'video.webm'" autoplay muted />
+      <video
+        :src="base + 'video.webm'"
+        style="background: black; object-fit: cover"
+        autoplay
+        muted
+      />
     </template>
   </DefaultTheme.Layout>
 </template>
