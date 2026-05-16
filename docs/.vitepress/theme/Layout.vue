@@ -18,11 +18,20 @@ watchEffect(() => {
   <DefaultTheme.Layout>
     <template #home-hero-image>
       <video
-        :src="base + 'video.webm'"
-        style="background: transparent; object-fit: cover"
         autoplay
         muted
-      />
+        playsinline
+        webkit-playsinline
+        preload="auto"
+        disablepictureinpicture
+        style="width: 100%; height: 100%; object-fit: cover; background: transparent"
+      >
+        <!-- Chrome / Edge / Firefox -->
+        <source :src="base + 'video.webm'" type="video/webm" />
+
+        <!-- Safari / iPhone -->
+        <source :src="base + 'video.mov'" type="video/quicktime" />
+      </video>
     </template>
   </DefaultTheme.Layout>
 </template>
