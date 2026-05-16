@@ -19,7 +19,7 @@ watchEffect(() => {
     <template #home-hero-image>
       <video
         :src="base + 'video.webm'"
-        style="background: black; object-fit: cover"
+        style="background: transparent; object-fit: cover"
         autoplay
         muted
       />
