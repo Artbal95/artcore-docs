@@ -51,7 +51,6 @@ const generateSidebar = (locale?: Locales): DefaultTheme.SidebarItem[] => {
 
     return rootMeta.map((root) => {
       const { index, dir, ...r } = root
-
       if (index) {
         return {
           text: r.text,
@@ -75,6 +74,7 @@ const generateSidebar = (locale?: Locales): DefaultTheme.SidebarItem[] => {
       }
     })
   } catch (e) {
+    console.error({ e })
     return []
   }
 }

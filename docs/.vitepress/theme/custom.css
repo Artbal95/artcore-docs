@@ -1,4 +1,7 @@
 :root {
+    --cli-prompt: #032f62;
+    --cli-value: #1a7f37;
+
     --vp-home-hero-name-color: transparent;
     --vp-home-hero-name-background: linear-gradient(
             90deg,
@@ -6,4 +9,32 @@
             #FF8CCF 45%,
             #9EC5FF 100%
     );
+}
+
+.dark {
+    --cli-prompt: #9ecbff;
+    --cli-value: #00ff88;
+}
+
+body, p, span {
+    line-height: 1.5 !important;
+}
+
+@media (max-width: 768px) {
+    div[class*="language-"], div.vp-code-group {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    div[class*="language-"], div.tabs {
+        margin: 0 !important;
+    }
+
+    div[class*="language-"] pre {
+        margin: 0 !important;
+        padding-left: 12px;
+        padding-right: 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
 }

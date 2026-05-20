@@ -6,11 +6,10 @@ hero:
     text: 'Layered Modular Design'
     tagline: 'Масштабируемая архитектура для сложных React-приложений.'
     image:
-        dark: /dark.png
-        light: /light.png
+        src: /hero.png
         alt: ArtCore
     actions:
-        - theme: brand
+        — theme: brand
           text: Что такое ArtCore?
           link: /ru/docs/introduction/what-is-artcore
         - theme: alt
@@ -49,9 +48,9 @@ ArtCore — это система frontend-архитектуры, создан�
 ## Начать разработку
 
 <script setup>
-import { useData } from 'vitepress'
+import { useData } from 'vitepress';
 
-const { lang, site } = useData()
+const { lang, site } = useData();
 
 const withBase = (url) => site.value.base + url
 </script>

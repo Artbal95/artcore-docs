@@ -10,6 +10,11 @@ export default defineConfig({
   sitemap: {
     hostname: `https://artbal95.github.io${basePath}`,
   },
+  vite: {
+    server: {
+      host: true,
+    },
+  },
   srcDir: './src',
   cleanUrls: true,
   head: [
@@ -94,6 +99,10 @@ export default defineConfig({
           label: 'На этой странице',
         },
         sidebar: generateSidebar('ru'),
+        docFooter: {
+          prev: 'Предыдущая страница',
+          next: 'Следующая страница',
+        },
       },
     },
   },

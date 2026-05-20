@@ -13,5 +13,15 @@
     "dir": "architecture",
     "text": "Architecture",
     "collapsed": false
+  },
+  {
+    "dir": "cli",
+    "text": "CLI",
+    "collapsed": true
+  },
+  {
+    "dir": "templates",
+    "text": "Templates",
+    "collapsed": true
   }
 ]

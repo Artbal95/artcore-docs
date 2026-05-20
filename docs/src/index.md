@@ -5,8 +5,11 @@ hero:
     name: 'ArtCore'
     text: 'Layered Modular Design'
     tagline: 'Scalable architecture for complex React applications.'
+    image:
+        src: /hero.png
+        alt: ArtCore
     actions:
-        - theme: brand
+        — theme: brand
           text: What is ArtCore?
           link: /docs/introduction/what-is-artcore
         - theme: alt
@@ -17,13 +20,13 @@ hero:
           link: /docs/architecture/overview
 
 features:
-    - icon: 🧱
+    — icon: 🧱
       title: Layered Architecture
       details: Clear boundaries between business logic, UI, and infrastructure.
-    - icon: 🧩
+    — icon: 🧩
       title: Modular by Default
       details: Independent features designed for long-term scalability.
-    - icon: ⚡
+    — icon: ⚡
       title: Built for Large Teams
       details: Predictable structure for fast-growing React applications.
 ---
@@ -45,9 +48,9 @@ It combines layered architecture, modular boundaries, and strict dependency rule
 ## Start Building
 
 <script setup>
-import { useData } from 'vitepress'
+import { useData } from 'vitepress';
 
-const { lang, site } = useData()
+const { lang, site } = useData();
 
 const withBase = (url) => site.value.base + url
 </script>
