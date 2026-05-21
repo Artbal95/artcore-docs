@@ -9,7 +9,7 @@ hero:
         src: /hero.png
         alt: ArtCore
     actions:
-        — theme: brand
+        - theme: brand
           text: What is ArtCore?
           link: /docs/introduction/what-is-artcore
         - theme: alt
@@ -20,13 +20,13 @@ hero:
           link: /docs/architecture/overview
 
 features:
-    — icon: 🧱
+    - icon: 🧱
       title: Layered Architecture
       details: Clear boundaries between business logic, UI, and infrastructure.
-    — icon: 🧩
+    - icon: 🧩
       title: Modular by Default
       details: Independent features designed for long-term scalability.
-    — icon: ⚡
+    - icon: ⚡
       title: Built for Large Teams
       details: Predictable structure for fast-growing React applications.
 ---

@@ -9,7 +9,7 @@ hero:
         src: /hero.png
         alt: ArtCore
     actions:
-        — theme: brand
+        - theme: brand
           text: Что такое ArtCore?
           link: /ru/docs/introduction/what-is-artcore
         - theme: alt
