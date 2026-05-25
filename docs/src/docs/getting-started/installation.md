@@ -63,7 +63,7 @@ After specifying the project name, the CLI will prompt you to choose a project t
 
 ```bash
 ? Choose project type:
-❯ Pure React
+❯ Single Page Application
 ```
 
 Each type defines the basic architecture and a set of predefined dependencies.

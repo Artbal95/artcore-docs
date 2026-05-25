@@ -20,6 +20,11 @@ body, p, span {
     line-height: 1.5 !important;
 }
 
+pre.no-copy + button.copy,
+pre.no-copy button.copy {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
     div[class*="language-"], div.vp-code-group {
         border-radius: 10px;

@@ -4,12 +4,12 @@
     "text": "Установка"
   },
   {
-    "fileName": "first-project",
-    "text": "Первый проект"
-  },
-  {
     "fileName": "folder-structure",
     "text": "Структура папок"
+  },
+  {
+    "fileName": "first-project",
+    "text": "Первый проект"
   },
   {
     "fileName": "routing",

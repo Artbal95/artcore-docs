@@ -1,6 +1,18 @@
 [
   {
     "fileName": "overview",
-    "text": "Overview"
+    "text": "Обзор"
+  },
+  {
+    "fileName": "core",
+    "text": "Core"
+  },
+  {
+    "fileName": "pages",
+    "text": "Pages"
+  },
+  {
+    "fileName": "modules",
+    "text": "Modules"
   }
 ]

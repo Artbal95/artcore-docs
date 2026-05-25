@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import generateSidebar from './utils/sidebar.js'
+import { transformerMetaHighlight } from '@shikijs/transformers'
 
 const isDev = process.env.NODE_ENV === 'development'
 const basePath = isDev ? '/' : '/artcore-docs/'
@@ -64,10 +65,35 @@ export default defineConfig({
     // theme color (иконка/браузерная тема)
     ['meta', { name: 'theme-color', content: '#0f172a' }],
   ],
+  transformHtml(code, id, context) {
+    if (!code.includes('no-copy')) return code
+
+    return code.replace(
+      /<div class="([^"]*language-[^"]*)[^"]*no-copy[^"]*">([\s\S]*?)<\/div>/g,
+      (match, cls, inner) => {
+        const cleaned = inner.replace(/<button class="copy".*?<\/button>/, '')
+
+        return `<div class="${cls} no-copy">${cleaned}</div>`
+      },
+    )
+  },
   markdown: {
     anchor: {
       permalink: false,
     },
+    codeTransformers: [
+      transformerMetaHighlight(),
+      {
+        name: 'no-copy',
+        pre(node) {
+          const meta = this.options.meta?.__raw || ''
+          if (!meta.includes('no-copy')) return
+          node.properties ||= {}
+          node.properties.class ||= []
+          node.properties.class.push('no-copy')
+        },
+      },
+    ],
   },
   locales: {
     root: {
@@ -80,6 +106,9 @@ export default defineConfig({
         footer: {
           message: 'Released under the MIT License.',
           copyright: 'Copyright © 2026-present Artur Balayan',
+        },
+        outline: {
+          level: [2, 3],
         },
         sidebar: generateSidebar(),
       },
@@ -97,6 +126,7 @@ export default defineConfig({
         },
         outline: {
           label: 'На этой странице',
+          level: [2, 3],
         },
         sidebar: generateSidebar('ru'),
         docFooter: {

@@ -1,5 +1,5 @@
 <template>
-  <details class="artcore-details">
+  <details class="artcore-details" :open="open">
     <summary class="artcore-summary">
       {{ title }}
     </summary>
@@ -13,6 +13,7 @@
 <script setup lang="ts">
 defineProps<{
   title: string
+  open?: boolean
 }>()
 </script>
 

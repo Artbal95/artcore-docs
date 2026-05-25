@@ -2,5 +2,17 @@
   {
     "fileName": "overview",
     "text": "Overview"
+  },
+  {
+    "fileName": "core",
+    "text": "Core"
+  },
+  {
+    "fileName": "pages",
+    "text": "Pages"
+  },
+  {
+    "fileName": "modules",
+    "text": "Modules"
   }
 ]
